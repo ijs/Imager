@@ -1,6 +1,6 @@
 {
   "name": "Imager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "uploader for mobile",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "clean": "rm -fr dist/*",
     "build": "(if [ ! -d dist ];then  mkdir dist; fi) && rm -fr dist/* && node build/build.js",
     "watch": "./node_modules/.bin/watch \"npm run build\" src/",
+    "prepublish": "npm run build",
     "jasmine": "istanbul cover jasmine-node -- --matchall tests"
   },
   "keywords": [

@@ -26,7 +26,7 @@ rollup.rollup({
 	]
 }).then((bundle) => {
 	console.log(yellow('start building'))
-	return write(resolvePath(`../dist/index.js`), bundle.generate({
+	return write(resolvePath(`../dist/${name}.common.js`), bundle.generate({
 		format: 'cjs',
 		banner: banner
 	}).code)
