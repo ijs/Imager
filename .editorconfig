@@ -1,0 +1,17 @@
+# Jerret's style
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+[*.{js,php,py}]
+
+# Change these settings to your own preference
+indent_style = space
+indent_size = 4
+
+
+[*.md]
+insert_final_newline = false

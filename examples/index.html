@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uploader</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            display: block;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+<input type="file" name="" id="">
+<img src="" alt="">
+<script src="../node_modules/exif-js/exif.js"></script>
+<script src="../dist/Imager.js"></script>
+<script>
+    var fileInput, img
+    fileInput = document.querySelector('input[type=file]')
+    img = document.querySelector('img')
+    fileInput.addEventListener('change', function(e){
+        var file, imager
+        file = e.target.files[0]
+        if(file){
+            if(window.Imager.isImage(file)) {
+                imager = new window.Imager({
+                    file: file,
+                    quality: 0.8
+                })
+                imager.getExif().then(data => {
+                    return imager.loaded()
+                }).then(base64 => {
+                    img.src = base64
+                })
+            } else {
+                console.log('不是图片')
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
