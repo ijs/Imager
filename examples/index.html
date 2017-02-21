@@ -31,7 +31,8 @@
             if(window.Imager.isImage(file)) {
                 imager = new window.Imager({
                     file: file,
-                    quality: 0.8
+                    quality: 0.1,
+                    isLimit: false
                 })
                 imager.getExif().then(data => {
                     return imager.loaded()
