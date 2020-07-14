@@ -1,5 +1,5 @@
 /*!
- * Imager v0.1.5
+ * Imager v0.1.6
  * (c) 2020 321jiangtao@gmail.com
  * Released under the  License.
  */
