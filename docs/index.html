@@ -18,8 +18,8 @@
 <body>
 <input type="file" name="" id="">
 <img src="" alt="">
-<script src="../node_modules/exif-js/exif.js"></script>
-<script src="../dist/Imager.js"></script>
+<script src="//cdn.staticfile.org/exif-js/2.3.0/exif.min.js"></script>
+<script src="//unpkg.com/Imager@0.1.6/dist/Imager.min.js"></script>
 <script>
     var fileInput, img
     fileInput = document.querySelector('input[type=file]')
@@ -42,7 +42,6 @@
             } else {
                 console.log('不是图片')
             }
-
         }
     })
 </script>
