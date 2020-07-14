@@ -11,7 +11,7 @@
         }
         img{
             display: block;
-            max-width: 400px;
+            width: 400px;
         }
     </style>
 </head>
@@ -31,7 +31,7 @@
             if(window.Imager.isImage(file)) {
                 imager = new window.Imager({
                     file: file,
-                    quality: 0.1,
+                    quality: 1,
                     isLimit: false
                 })
                 imager.getExif().then(data => {

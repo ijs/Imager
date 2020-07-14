@@ -168,19 +168,19 @@ export default class Imager {
                     if (orientation != "" && orientation != 1) {
                         switch (orientation) {
                             case 6://需要顺时针（向左）90度旋转
-                                Imager.rotateImg(this, 'left', canvas)
+                                Imager.rotateImg(image, 'left', canvas)
                                 break
                             case 8://需要逆时针（向右）90度旋转
-                                Imager.rotateImg(this, 'right', canvas)
+                                Imager.rotateImg(image, 'right', canvas)
                                 break
                             case 3://需要180度旋转
-                                Imager.rotateImg(this, 'right', canvas);//转两次
-                                Imager.rotateImg(this, 'right', canvas)
+                                Imager.rotateImg(image, 'right', canvas);//转两次
+                                Imager.rotateImg(image, 'right', canvas)
                                 break
                         }
                     }
 
-                    resolve(canvas.toDataURL("image/jpeg", quality))
+                    resolve(canvas.toDataURL("image/png", quality))
                 })
                 image.addEventListener('err', reject)
             })
